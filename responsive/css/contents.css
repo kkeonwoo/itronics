@@ -1,0 +1,191 @@
+#container {
+  box-sizing: border-box;
+  padding-top: 70px;
+  padding-bottom: 200px;
+}
+#container .contents {
+  padding-top: 128px;
+}
+#container .contents .inner {
+  width: 800px;
+  margin: 0 auto;
+}
+#container .contents .inner h2 {
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+}
+#container .contents .inner .form {
+  margin-top: 80px;
+}
+#container .contents .inner .form .field .fieldset {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+#container .contents .inner .form .field .fieldset p {
+  font-weight: 700;
+  font-size: 18px;
+}
+#container .contents .inner .form .field .fieldset .label {
+  position: relative;
+}
+#container .contents .inner .form .field .fieldset .label input[type=checkbox] {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  left: 0;
+  top: 0;
+}
+#container .contents .inner .form .field .fieldset .label span {
+  display: flex;
+}
+#container .contents .inner .form .field .fieldset .label span:before {
+  content: "";
+  display: block;
+  margin-right: 10px;
+  overflow: hidden;
+  background-color: #ccc;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+#container .contents .inner .form .field .fieldset .label input:checked ~ span::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  overflow: hidden;
+  background-image: url("../images/contents/check.svg");
+  background-size: cover;
+  background-position: 50% -50%;
+  background-repeat: no-repeat;
+  background-color: #e77612;
+}
+#container .contents .inner .form .textarea textarea {
+  margin-top: 23px;
+  width: 100%;
+  height: 300px;
+  display: block;
+  resize: none;
+  border: none;
+  word-break: keep-all;
+  background-color: rgb(248, 248, 248);
+}
+#container .contents .inner .form .insert {
+  width: 100%;
+  margin-top: 30px;
+}
+#container .contents .inner .form .insert dt {
+  margin-top: 40px;
+}
+#container .contents .inner .form .insert .label input {
+  margin: 20px 0;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#container .contents .inner .form .insert .label.harf {
+  font-size: 0;
+}
+#container .contents .inner .form .insert .label.harf:last-child input {
+  margin-right: 0;
+}
+#container .contents .inner .form .insert .label.harf input {
+  width: calc(50% - 10px);
+  margin-right: 15px;
+}
+#container .contents .inner .form .insert .label textarea {
+  width: calc(100% - 60px);
+  height: 400px;
+  border: 1px solid #ccc;
+  padding: 30px;
+  resize: none;
+}
+#container .contents .inner .desc {
+  margin-top: 10px;
+}
+#container .contents .inner .desc p {
+  color: #ccc;
+  line-height: 1.5;
+}
+#container .contents .inner .desc p::before {
+  font-family: "Material Icons";
+  content: "noise_control_off";
+  display: inline-block;
+  margin-left: 0;
+  font-family: "Material Icons";
+  margin-right: 5px;
+  font-size: 12px;
+}
+#container .contents .inner .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+#container .contents .inner .btns .btn {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.fileContents {
+  margin-top: 30px;
+}
+.fileContents .fileBox {
+  display: flex;
+  justify-content: flex-end;
+}
+.fileContents .fileBox .file {
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.fileContents .fileBox .label {
+  width: 150px;
+  height: 50px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+.fileContents .fileBox .label input[type=file] {
+  width: 0;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  border: none;
+}
+
+.insert01 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.insert01 dl {
+  flex-basis: calc(50% - 10px);
+}
+.insert01 dl dt {
+  padding-top: 40px;
+}
+.insert01 dl dd .selct.harf {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}

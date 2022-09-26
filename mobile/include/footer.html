@@ -1,0 +1,70 @@
+<footer id="footer" class="section">
+  <div class="flogo">
+    <img src="../images/common/logo-b.svg" alt="" />
+  </div>
+  <div class="addressBox">
+    <div class="customer">
+      <dl>
+        <dt>고객센터</dt>
+        <dd>1588-7064</dd>
+      </dl>
+      <a href="#">문의하기</a>
+    </div>
+    <address>
+      <p>상호 : (주)아이트로닉스</p>
+      <p>주소 : 경기도 용인시 기흥구 중부대로 56번길 15 <br> (영덕동 516-1번지)</p>
+      <p>TEL. 031-217-1063 <span>FAX. 031-217-1067</span></p>
+    </address>
+    <div class="utilMenu">
+      <ul>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+      </ul>
+    </div>
+    <p class="copyright">Copyright ⓒ 2022 아이트로닉스. <br> All Rights Reserved.</p>
+  </div>
+  <div class="familySite">
+    <select title="FAMMILY SITE">
+      <option value="https://www.itronics.co.kr/">FAMILY SITE</option>
+      <option value="http://www.ilscience.co.kr/ko/">IL SCIENCE</option>
+      <option value="http://www.banzzak.co.kr/">IL LIGHTING</option>
+      <option value="http://www.conus.kr/">IL CONUS</option>
+      <option value="http://www.follinic.co.kr/index.html">FOLLINIC</option>
+      <option value="http://www.kailux.co.kr/">KAILUX</option>
+      <option value="https://aheads.co.kr/">AHEADS</option>
+      <option value="https://www.achakey.net/">ACHAKEY</option>
+      <option value="http://cdprestige.co.kr/">CLIFDESIGN</option>
+    </select>
+  </div>
+</footer>
+<!-- footer end -->
+
+<script>
+  const gnb = document.querySelector("#gnb");
+  const header = document.querySelector("#header");
+  const btnAll = document.querySelector(".btnAll");
+  // const depth01 = document.querySelectorAll(".depth01");
+  
+  // const jdepth01 = jQuery(".depth01");
+const depth01 = $(".depth01");
+const depth02 = $(".depth02");
+
+depth01.on("click",function(e){
+  e.preventDefault(); //a태그에 원래 있던 링크 기능을 무력화시키기
+  const depth02 = $(this).next(".depth02");
+  const siblings = $(this).parent().siblings().find(".depth02");
+  siblings.stop().slideUp();
+  depth02.stop().slideToggle();
+});
+  
+  // gnb.addEventListener("mouseenter", function () {
+  //   header.classList.add("open");
+  // });
+  btnAll.addEventListener("click", function () {
+    header.classList.toggle("open");
+    depth02.slideUp();
+  });
+</script>
+
+</body>
+</html>
